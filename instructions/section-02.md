@@ -82,7 +82,7 @@ public class SneakerTest {
 	    String expected = "OZWEEGO";
 	    
 	    // when (2)
-	    testSneaker = new Sneaker()
+	    testSneaker = new Sneaker()add .
 	    testSneaker.setName(expected);
 	    
 	    // then (3)
