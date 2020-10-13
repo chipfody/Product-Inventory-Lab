@@ -1,4 +1,4 @@
 package services;
 
-public class book {
+public class Book {
 }

@@ -1,6 +1,6 @@
 package models;
 
-public class souvenier {
+public class Souvenier {
     private int id;
     private int quantity;
     private String spoons;
