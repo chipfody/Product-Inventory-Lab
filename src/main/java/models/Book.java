@@ -1,6 +1,7 @@
 package models;
 
-public class Books {
+public class Book {
+    private int bookId;
     private int isbn;
     private int quantity;
     private String title;
@@ -8,13 +9,23 @@ public class Books {
     private String genre;
     private float price;
 
-    public Books(int isbn, int quantity, String title, String author, String genre, float price) {
+
+    public Book(int bookId, int isbn, int quantity, String title, String author, String genre, float price) {
+        this.bookId = bookId;
         this.isbn = isbn;
         this.quantity = quantity;
         this.title = title;
         this.author = author;
         this.genre = genre;
         this.price = price;
+    }
+
+    public int getBookId() {
+        return bookId;
+    }
+
+    public void setBookId(int bookId) {
+        this.bookId = bookId;
     }
 
     public int getIsbn() {

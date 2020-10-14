@@ -9,6 +9,7 @@ public class BookTest {
 @Test
 public void constructorTest() {
     //given
+    int expectedBookId = 1;
     int expectedIsbn = 23576;
     int expectedQuantity = 137;
     String expectedTitle = "Moby Dick";
@@ -17,9 +18,10 @@ public void constructorTest() {
     float expectedPrice = 19.99f;
 
     //when
-    Books testBook = new Books(expectedIsbn, expectedQuantity, expectedTitle, expectedAuthor, expectedGenre, expectedPrice);
+    Book testBook = new Book(expectedBookId, expectedIsbn, expectedQuantity, expectedTitle, expectedAuthor, expectedGenre, expectedPrice);
 
     //then
+    Assert.assertEquals(expectedBookId, testBook.getBookId());
     Assert.assertEquals(expectedIsbn, testBook.getIsbn());
     Assert.assertEquals(expectedQuantity, testBook.getQuantity());
     Assert.assertEquals(expectedTitle, testBook.getTitle());
