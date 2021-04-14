@@ -1,6 +1,6 @@
 package services;
 
-import junit.framework.Assert;
+import org.junit.Assert;
 import org.junit.Test;
 import models.Book;
 
@@ -73,7 +73,7 @@ public class BookServiceTest {
 
 
         //then
-        Assert.assertEquals(Integer.class.getName(), new Integer(expectedBookId2).getClass().getName());
+        Assert.assertEquals(Integer.class.getName(), Integer.class.getName());
         Assert.assertEquals(actualTitle, bookService.findBook(expectedBookId2));
     }
     @Test

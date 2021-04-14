@@ -12,9 +12,7 @@ public class BookService {
 
     public Book create(int isbn, int quantity, String title, String author, String genre, float price) {
 
-        Book newBook = new Book(nextBookId++, isbn, quantity, title, author, genre,price);
-
-    return newBook;
+        return new Book(nextBookId++, isbn, quantity, title, author, genre,price);
     }
 
     public Book findBook(int bookId) {
