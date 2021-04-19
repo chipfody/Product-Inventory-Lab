@@ -65,16 +65,19 @@ public class BookServiceTest {
     public void bookServiceFindByIdTest() {
 
         //create new book model
-        Book testBook = bookService.create(expectedIsbn, expectedQuantity, expectedTitle, expectedAuthor, expectedGenre, expectedPrice);
-        Book testBook2 = bookService.create(expectedIsbn2, expectedQuantity2, expectedTitle2, expectedAuthor2, expectedGenre2, expectedPrice2);
+//        Book testBook = bookService.create(expectedIsbn, expectedQuantity, expectedTitle, expectedAuthor, expectedGenre, expectedPrice);
+//        Book testBook2 = bookService.create(expectedIsbn2, expectedQuantity2, expectedTitle2, expectedAuthor2, expectedGenre2, expectedPrice2);
+        String expectedTitle = "It";
 
         //when
-        String actualTitle = testBook2.getTitle();
+//        String actualTitle = testBook2.getTitle();
+        String actualTitle = bookService.findBook(3).getTitle();
 
 
         //then
-        Assert.assertEquals(Integer.class.getName(), Integer.class.getName());
-        Assert.assertEquals(actualTitle, bookService.findBook(expectedBookId2));
+//        Assert.assertEquals(Integer.class.getName(), Integer.class.getName());
+//        Assert.assertEquals(actualTitle, bookService.findBook(expectedBookId2));
+        Assert.assertEquals(expectedTitle, actualTitle);
     }
     @Test
     public void findAllTest() {
